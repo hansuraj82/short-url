@@ -13,11 +13,14 @@ const urlSchema = new mongoose.Schema({
     },
 
     visitedHistory: [{
-        timeStams: {
+        timeStamps: {
             type: Number
         }
     }]
-})
+},
+{
+    timestamps: true
+} )
 
 const Url = mongoose.model('Url',urlSchema);
 
